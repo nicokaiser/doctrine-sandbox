@@ -48,7 +48,7 @@ $connectionOptions = array(
 $em = \Doctrine\ORM\EntityManager::create($connectionOptions, $config);
 //$em->getEventManager()->addEventSubscriber(new \Doctrine\DBAL\Event\Listeners\MysqlSessionInit('utf8', 'utf8_unicode_ci'));
 
-$helperSet = new \Symfony\Component\Console\Helper\HelperSet(array(
+$helperSet = new \Symfony\Components\Console\Helper\HelperSet(array(
     'db' => new \Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper($em->getConnection()),
     'em' => new \Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper($em)
 ));
